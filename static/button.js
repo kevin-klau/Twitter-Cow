@@ -1,5 +1,5 @@
-let value = 0;
+let val = 0;
 function incrementVal(){
-    document.getElementById('sean-button').value = ++value;
-    console.log(value);
+    document.getElementById('sean-button').inc = ++val;
+    console.log(inc);
 }

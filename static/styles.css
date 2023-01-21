@@ -30,12 +30,27 @@ h4.display-3{
 }
 
 .home-banner{
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(SpaceBG.png);
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(bg1.png);
   background-size: cover;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
-.banner-text{
+.home-banner-text{
   transform: translateY(25vh);
 }
+
+.banner-2{
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(bg2.png);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.banner-3{
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(bg3.png);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
