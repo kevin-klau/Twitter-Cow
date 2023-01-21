@@ -1,6 +1,5 @@
 function incrementVal(){
-    let value = parseInt(document.getElementById('sean-button').value, 10)
-    value = isNaN(value) ? 0 : value;
-    value += 1;
-    console.log(value);
+    let value = 0;
+    document.getElementById('sean-button').value = ++value;
+    console.log(document.getElementById('sean-button').value);
 }
