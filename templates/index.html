@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Flask app</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <h1 class="logo">Ardit's web app</h1>
-        <strong><nav>
-          <ul class="menu">
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-          </ul>
-        </nav></strong>
-      </div>
-    </header>
-    <div class="container">
-      {% block content %}
-      {% endblock %}
-    </div>
-  </body>
+
+<head>
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+	
+	<title>FlaskTest</title>
+</head>
+
+<body>
+	<h2>Welcome To GFG</h2>
+	<h4>Flask: Rendering Templates</h4>
+<!-- this section can be replaced by a child document -->
+{% block body %}
+
+
+<p>This is a Flask application.</p>
+
+
+{% endblock %}
+
+
+</body>
+
 </html>
