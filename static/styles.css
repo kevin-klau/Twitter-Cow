@@ -1,3 +1,41 @@
-body{
-  background-image: url()
+*{
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar-nav .nav-link{
+      position: relative;
+  }
+  
+  .navbar-nav .nav-link::after{
+      content: '';
+      height: 2px;
+      width: 0;
+      background: white;
+      position: absolute;
+      left: 10%;
+      bottom: 10%;
+      transition: 0.4s;
+  }
+  
+  .navbar-nav .nav-link:hover::after{
+      width: 80%;
+  }
+}
+
+h4.display-3{
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.home-banner{
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(SpaceBG.png);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.banner-text{
+  transform: translateY(25vh);
 }
