@@ -19,12 +19,15 @@ def index():
 def keke():
     # os.system("python Scrape/keke.py")
     # os.system("python3 Scrape/keke.py")
-    scrape()
+    vvv ='travel'
+    # if request.method == 'POST':
+    #     vvv = request.form['nm']
+    scrape(vvv)
     document_path = os.getcwd()+'/Scrape/ScrapedInfo.txt'
     document = open(document_path, 'r')
     with document as f:
         s = f.read()
-    #keke.scrape()
+
     return '<p>Bonjour</p>'
  
 if __name__ == "__main__":
@@ -37,7 +40,7 @@ import snscrape.modules.twitter as sntwitter
 import csv
 import numpy as np
 
-def scrape() -> None:
+def scrape(vart:str) -> None:
     tweets_list1 = set()
 
     # Using TwitterSearchScraper to scrape data and append tweets to list
@@ -45,7 +48,7 @@ def scrape() -> None:
 
     with open('ScrapedInfo.txt', 'w', encoding='utf-8') as f:
 
-        for i,tweet in enumerate(sntwitter.TwitterSearchScraper('hashtag').get_items()):
+        for i,tweet in enumerate(sntwitter.TwitterSearchScraper(vart).get_items()):
             if i>500:
                 break
             info = tweet.content + 'とチ.く$' + str(tweet.replyCount) + 'とチ.く$' + str(tweet.likeCount) + 'とチ.く$' + str(tweet.retweetCount) + 'とチ.く$' + str(tweet.quoteCount) + 'とチ.く$' + str(tweet.viewCount) + 'ン'
