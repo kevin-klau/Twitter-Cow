@@ -55,20 +55,18 @@ def algorithm (text : str) -> int:
                 information = j.split('とチ.く$')
                 #adder = math.log(6 * float(information[1]) + 1,5) + math.log(6 * float(information[2]) + 1,5) + math.log(10 * float(information[3]) + 1,5) + math.log(10 * float(information[4]) + 1,5)
                 adder = random.randint(0, 30)
-                print(information[1])
+                
                 if data_list[i][0] in theSet:
                     theSet[data_list[i][0]] += adder
                 else :
                     theSet[data_list[i][0]] = adder
-                    print(theSet[data_list[i][0]])
+                    
             i += 1
 
     theSet = sorted(theSet.items())
     theSet.sort(key=lambda y: y[1], reverse=True)
     dictionary = {}
     for k in range(1,6):
-        print(k)
-        print(theSet)
         dictionary[theSet[k][0]] = theSet[k][1]
         
     with open("sample.json", "w") as outfile:
