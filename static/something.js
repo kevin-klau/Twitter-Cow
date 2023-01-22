@@ -1,0 +1,1 @@
+import sample from './sample.json' assert { type: 'JSON' };
