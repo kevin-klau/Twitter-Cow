@@ -34,6 +34,7 @@ h4.display-3{
   background-size: cover;
   width: 100%;
   height: 105vh;
+  padding-bottom:1000px !important;
 }
 
 .home-banner-text{
