@@ -32,6 +32,7 @@ def keke(searchQuery):
     with document as f:
         s = f.read()
     kk = algorithm(s)
+    print(kk)
 
     return '<p>Bonjour</p>'
  
