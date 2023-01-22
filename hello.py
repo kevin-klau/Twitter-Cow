@@ -9,12 +9,15 @@ def index():
 
 @app.route("/keke", methods=['GET','POST'])
 def keke():
-    os.system("python Scrape/keke.py")
-    document_path = os.getcwd()+'/Scrape/ScrapedInfo.txt'
-    document = open(document_path, 'r')
-    with document as f:
-        s = f.read()
-        print(s)
+    if request.method == 'GET':
+        os.system("python Scrape/keke.py")
+        document_path = os.getcwd()+'/Scrape/ScrapedInfo.txt'
+        document = open(document_path, 'r')
+        with document as f:
+            s = f.read()
+            print(s)
+        request.form = s
+
     return '<p>Bonjour</p>'
  
 if __name__ == "__main__":
