@@ -5,5 +5,6 @@ function searching(){
     document.getElementById("searchinput").value='';
     const request = new XMLHttpRequest()
     request.open('POST',`keke/${JSON.stringify(searchQuery)}`)
-    request.send(searchQuery)
+    request.send()
+    fetch('http://127.0.0.1:5000/keke')
  }
