@@ -1,4 +1,5 @@
 
+
 function searching(){
     let searchQuery = document.getElementById("searchinput").value;
     console.log(searchQuery);
@@ -7,4 +8,8 @@ function searching(){
     request.open('POST',`keke/${JSON.stringify(searchQuery)}`)
     request.send()
     fetch('http://127.0.0.1:5000/keke')
+        .then(response => response.json())
+        .then(data => {
+            
+        })
  }

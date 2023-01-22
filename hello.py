@@ -31,7 +31,8 @@ def keke(searchQuery):
     document = open(document_path, 'r')
     with document as f:
         s = f.read()
-    print('hello')
+    kk = algorithm(s)
+
     return '<p>Bonjour</p>'
  
 if __name__ == "__main__":
