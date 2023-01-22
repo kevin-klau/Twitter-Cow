@@ -17,10 +17,11 @@ def index():
 
 @app.route("/keke", methods=['GET','POST'])
 def keke():
+    vvv='travel'
     if request.method == "POST":
     # os.system("python Scrape/keke.py")
     # os.system("python3 Scrape/keke.py")
-        vvv = request.form
+        vvv ='travel'
     # if request.method == 'POST':
     #     vvv = request.form['nm']
     scrape(vvv)
@@ -28,7 +29,7 @@ def keke():
     document = open(document_path, 'r')
     with document as f:
         s = f.read()
-    print(s)
+
     return '<p>Bonjour</p>'
  
 if __name__ == "__main__":
