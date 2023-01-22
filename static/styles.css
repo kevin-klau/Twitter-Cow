@@ -54,10 +54,14 @@ h4.display-3{
   height: 105vh;
 }
 
-.card-img-overlay{
-  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
-}
-
 .form-control {
   width: 50vh !important;
+}
+
+.card-img-overlay{
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+}
+
+.card-img-overlay:hover{
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3));
 }
