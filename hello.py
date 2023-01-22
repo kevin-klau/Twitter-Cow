@@ -1,11 +1,19 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 app = Flask(__name__)
+cors = CORS(app)
 
 import os
 
+@app.route("/receiver",methods=["POST"])
+def post():
+    data = request.get_json()
+    data = jsonify(data)
+    return data
+
 @app.route("/", methods=['GET','POST'])
 def index():
-    return render_template("index.html")
+    return render_template("testhtml.html")
 
 @app.route("/keke", methods=['GET','POST'])
 def keke():
@@ -20,7 +28,7 @@ def keke():
     return '<p>Bonjour</p>'
  
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
 
 import os
 import snscrape
