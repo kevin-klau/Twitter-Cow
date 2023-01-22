@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
-from flask_cors import CORS
+#from flask_cors import CORS
 app = Flask(__name__)
-cors = CORS(app)
+#cors = CORS(app)
 
 import os
 
@@ -13,13 +13,14 @@ def post():
 
 @app.route("/", methods=['GET','POST'])
 def index():
-    return render_template("testhtml.html")
+    return render_template("index.html")
 
 @app.route("/keke", methods=['GET','POST'])
 def keke():
+    if request.method == "POST":
     # os.system("python Scrape/keke.py")
     # os.system("python3 Scrape/keke.py")
-    vvv ='travel'
+        vvv = request.form
     # if request.method == 'POST':
     #     vvv = request.form['nm']
     scrape(vvv)
@@ -27,7 +28,7 @@ def keke():
     document = open(document_path, 'r')
     with document as f:
         s = f.read()
-
+    print(s)
     return '<p>Bonjour</p>'
  
 if __name__ == "__main__":
