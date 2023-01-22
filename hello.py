@@ -15,9 +15,9 @@ def keke():
         document = open(document_path, 'r')
         with document as f:
             s = f.read()
-            print(s)
-        request.form = s
-
+            
+        request.form = 'hello!'
+        print('hello')
     return '<p>Bonjour</p>'
  
 if __name__ == "__main__":

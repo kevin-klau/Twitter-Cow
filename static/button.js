@@ -8,9 +8,9 @@ function incrementVal(){
             if (!response.ok) {
             throw new Error(`HTTP error: ${response.status}`);
             }
-            return response.json();
+            return response.txt();
         })
-        .then((json) => initialize(json))
+        .then((txt) => initialize(txt))
         .catch((err) => console.error(`Fetch problem: ${err.message}`));
 
 }
