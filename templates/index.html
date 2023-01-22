@@ -60,13 +60,12 @@
 				<div>
 					<img src="static/logowhite.png"/>
 				</div>
-				<p class="lead text-start py-2">
-					Twitter Cow gathers travel information from Twitter to find information
-					on the most popular destinations. Milk the content, with Twitter Cow. <br>
+				<p class="lead py-2">
+					Twitter Cow gathers information on Twitter's most popular destinations. 
+					Find your next vacation, and milk the content, with Twitter Cow. 
 				</p>
 				<a
-				href=""
-				target="_blank"
+				href="#service"
 				class="btn btn-outline-light"
 				>Try Now!</a>
        	 	</div>
@@ -75,18 +74,11 @@
     </div>
   </section>
 
-  <section class="text-light p-5 banner-2 text-center" id="service">
+  <section class="text-light p-5 banner-2 text-start" id="service">
 	<div class="container-fluid">
-		<div class="row py-5">
-			<div class="col-sm-12 pt-5">
-				<form class="d-flex pt-5" onsubmit="return false;">
-					<input class="form-control me-2" type="text" id="searchinput" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-light" onclick="searching()">
-						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-						<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-					</svg>
-					</button>
-				</form>
+		<div class="row">
+			<div class="col-sm-12 display-2 py-5">
+				Our Randomized Picks
 			</div>
 		</div>
 
@@ -126,7 +118,7 @@
 		  <div class="row py-5">
 			<div class="col-sm-4">
 				<div class="card bg-dark text-white">
-				<img src="static/forest.jpeg" class="card-img" alt="...">
+				<img src="static/trees.jpeg" class="card-img" alt="...">
 				<div class="card-img-overlay">
 				  <h5 class="card-title">Card title</h5>
 				  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -136,7 +128,7 @@
 			</div>
 			<div class="col-sm-4">
 				<div class="card bg-dark text-white">
-					<img src="static/shore.jpeg" class="card-img" alt="...">
+					<img src="static/pond.jpeg" class="card-img" alt="...">
 					<div class="card-img-overlay">
 					  <h5 class="card-title">Card title</h5>
 					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -146,7 +138,7 @@
 			</div>
 			<div class="col-sm-4">
 				<div class="card bg-dark text-white">
-					<img src="static/flowers.jpeg" class="card-img" alt="...">
+					<img src="static/park.jpeg" class="card-img" alt="...">
 					<div class="card-img-overlay">
 						<h5 class="card-title">Card title</h5>
 						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -159,6 +151,95 @@
    	 </div>
   </section>
 
+  <section class="text-light p-5 banner-2 text-center" id="service">
+	<div class="container-fluid">
+		<div class="row py-5">
+			<div class="col-sm-6 pt-5">
+				<form class="d-flex pt-5" onsubmit="return false;">
+					<input class="form-control me-2" type="text" id="searchinput" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-light" onclick="searching()">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+						<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+					</svg>
+					</button>
+				</form>
+			</div>
+			<div class="col-sm-6 pt-5 display-2 text-end">
+				Search Any Keyword
+			</div>
+				
+		</div>
+
+        <div class="row">
+			<div class="col-sm-4">
+				<div class="card bg-dark text-white">
+				<img src="static/forest.jpeg" class="card-img" alt="...">
+				<div class="card-img-overlay">
+				  <h5 class="card-title" id="rank-1">Card title</h5>
+				  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				  <p class="card-text">Last updated 3 mins ago</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card bg-dark text-white">
+					<img src="static/shore.jpeg" class="card-img" alt="...">
+					<div class="card-img-overlay">
+					  <h5 class="card-title" id="rank-2">Card title</h5>
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					  <p class="card-text">Last updated 3 mins ago</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card bg-dark text-white">
+					<img src="static/flowers.jpeg" class="card-img" alt="...">
+					<div class="card-img-overlay">
+						<h5 class="card-title" id="rank-3">Card title</h5>
+						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						<p class="card-text">Last updated 3 mins ago</p>
+					</div>
+				</div>
+			</div>
+      	</div>
+
+		  <div class="row py-5">
+			<div class="col-sm-4">
+				<div class="card bg-dark text-white">
+				<img src="static/trees.jpeg" class="card-img" alt="...">
+				<div class="card-img-overlay">
+				  <h5 class="card-title" id="rank-4">Card title</h5>
+				  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				  <p class="card-text">Last updated 3 mins ago</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card bg-dark text-white">
+					<img src="static/pond.jpeg" class="card-img" alt="...">
+					<div class="card-img-overlay">
+					  <h5 class="card-title" id="rank-5">Card title</h5>
+					  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					  <p class="card-text">Last updated 3 mins ago</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="card bg-dark text-white">
+					<img src="static/park.jpeg" class="card-img" alt="...">
+					<div class="card-img-overlay">
+						<h5 class="card-title" id="rank-6">Card title</h5>
+						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						<p class="card-text">Last updated 3 mins ago</p>
+					</div>
+				</div>
+			</div>
+      	</div>
+
+   	 </div>
+  </section>
+  
+  <!---
   <section class="text-light p-5 banner-3 text-center">
 	<div class="container-fluid">
         <div class="row">
@@ -174,6 +255,15 @@
       	</div>
     </div>
   </section>
+-->
+
+<section class="text-light p-5 banner-3 text-center" id="service">
+</section>
+</footer>
+	<div class="text-center bg-black text-white p-3" id="copyright">
+		<h6 class="lead">© Copyright 2023 | Twitter Cow Inc.</h6>
+	</div>
+</footer>
 
 </body>
 
