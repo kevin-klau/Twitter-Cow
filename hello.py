@@ -13,7 +13,7 @@ def post():
 
 @app.route("/", methods=['GET','POST'])
 def index():
-    return render_template("testhtml.html")
+    return render_template("index.html")
 
 @app.route("/keke", methods=['GET','POST'])
 def keke():
