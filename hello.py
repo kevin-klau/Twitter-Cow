@@ -39,6 +39,40 @@ import pandas as pd
 import snscrape.modules.twitter as sntwitter
 import csv
 import numpy as np
+import math
+import json
+
+def algorithm (text : str) -> int:
+    posts = text.split('ンチミマチ')
+    
+    with open("data.csv",'r') as f :
+        data_list = list(csv.reader(f, delimiter=","))
+    data_array=np.array(data_list[1:])
+
+    theSet = {}
+
+    for j in posts:
+        i = 0
+        if j == "" : continue
+        while i < len(data_array):
+            if data_array[i][0] in j :
+                information = j.split('とチ.く$')
+                adder = math.log(6 * float(information[1]) + 1,5) + math.log(6 * float(information[2]) + 1,5) + math.log(10 * float(information[3]) + 1,5) + math.log(10 * float(information[4]) + 1,5)
+                if data_array[i][0] in theSet:
+                    theSet[data_array[i][0]] += adder
+                else :
+                    theSet[data_array[i][0]] = adder
+            i += 1
+
+
+    theSet = sorted(theSet.items())
+    theSet.sort(key=lambda y: y[1], reverse=True)
+    dictionary = {}
+    for k in range(1,6):
+        dictionary[theSet[k][0]] = theSet[k][1]
+        
+    with open("sample.json", "w") as outfile:
+        json.dump(dictionary, outfile)
 
 def scrape(vart:str) -> None:
     tweets_list1 = set()
@@ -48,14 +82,7 @@ def scrape(vart:str) -> None:
 
     with open('ScrapedInfo.txt', 'w', encoding='utf-8') as f:
 
-        for i,tweet in enumerate(sntwitter.TwitterSearchScraper(vart).get_items()):
+        for i,tweet in enumerate(sntwitter.TwitterSearchScraper(vart + 'min_faves:50').get_items()):
             if i>500:
                 break
             info = tweet.content + 'とチ.く$' + str(tweet.replyCount) + 'とチ.く$' + str(tweet.likeCount) + 'とチ.く$' + str(tweet.retweetCount) + 'とチ.く$' + str(tweet.quoteCount) + 'とチ.く$' + str(tweet.viewCount) + 'ン'
-            for i in info : 
-                if ord(i) == 32 or ord(i) == 35:
-                    continue
-                elif ord(i) == 12531:
-                    break
-                else:
-                    f.write(i)
