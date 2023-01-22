@@ -4,6 +4,13 @@ app = Flask(__name__)
 #cors = CORS(app)
 
 import os
+import snscrape
+import pandas as pd
+import snscrape.modules.twitter as sntwitter
+import csv
+import numpy as np
+import math
+import json
 
 @app.route("/receiver",methods=["POST"])
 def post():
@@ -15,8 +22,12 @@ def post():
 def index():
     return render_template("index.html")
 
-@app.route("/keke", methods=['GET','POST'])
-def keke():
+@app.route("/keke/<string:searchQuery>", methods=['GET','POST'])
+def keke(searchQuery):
+    searchQuery=json.loads(searchQuery)
+    data=searchQuery
+    print(data)
+    return'/'
     vvv='travel'
     if request.method == "POST":
     # os.system("python Scrape/keke.py")
@@ -34,15 +45,6 @@ def keke():
  
 if __name__ == "__main__":
     app.run(debug=True)
-
-import os
-import snscrape
-import pandas as pd
-import snscrape.modules.twitter as sntwitter
-import csv
-import numpy as np
-import math
-import json
 
 def algorithm (text : str) -> int:
     posts = text.split('ンチミマチ')
