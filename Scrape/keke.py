@@ -1,4 +1,4 @@
-iimport os
+import os
 import snscrape
 import pandas as pd
 import snscrape.modules.twitter as sntwitter
