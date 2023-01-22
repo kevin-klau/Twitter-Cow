@@ -1,4 +1,5 @@
 
+import sample from './sample.json' assert { type: 'JSON' };
 
 function searching(){
     let searchQuery = document.getElementById("searchinput").value;
@@ -8,5 +9,6 @@ function searching(){
     request.open('POST',`keke/${JSON.stringify(searchQuery)}`)
     request.send()
     fetch('http://127.0.0.1:5000/?#/keke/sample.json')
+    console.log(sample)
     
 }
