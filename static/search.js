@@ -7,7 +7,7 @@ function searching(){
     const request = new XMLHttpRequest()
     request.open('POST',`keke/${JSON.stringify(searchQuery)}`)
     request.send()
-    fetch('http://127.0.0.1:5000/keke')
+    fetch('http://127.0.0.1:5000/?#/keke')
         .then(response => response.json())
         .then(data => {
             
